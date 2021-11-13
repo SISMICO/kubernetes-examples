@@ -3,6 +3,7 @@
 1. `minikube start --driver='virtualbox'`
 1. `eval $(minikube -p minikube docker-env)`
 1. `docker build -t mykube .`
+1. Open in a new shell `minikube mount /home/leonardo/Projetos/kubernetes-examples/Prometheus:/prometheus`
 
 
 http://localhost:8080/actuator/health
