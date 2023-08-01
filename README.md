@@ -2,6 +2,7 @@
 
 1. `minikube start --driver='virtualbox' --memory 8192 --cpus 2 --extra-config=kubelet.max-pods=100`
 1. `minikube addons enable metrics-server`
+1. `minikube addons enable ingress`
 1. `eval $(minikube -p minikube docker-env)`
 1. `docker build -t mykube .`
 1. `kubectl apply -f kubernetes.yml`
