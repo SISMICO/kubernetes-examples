@@ -6,6 +6,14 @@
 1. `docker build -t mykube .`
 1. `kubectl apply -f kubernetes.yml`
 
+# How to run in Kubernetes
+
+1. `kind create cluster --config kind/kind-cluster-config.yaml`
+1. `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml`
+1. `docker build -t mykube:v1 .`
+1. `kind load docker-image mykube:v1`
+1. `kubectl apply -f kubernetes.yml`
+
 # Install Prometheus
 ``` bash
 kubectl create namespace prometheus
